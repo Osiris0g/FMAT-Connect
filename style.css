@@ -1,10 +1,9 @@
-/* --- Variables de colores y fuentes (Paleta UADY) --- */
+/* Variables de colores y fuentes base */
 :root {
-    --uady-azul-marino: #0C234B; /* Color principal de la UADY */
-    --uady-amarillo-oro: #EAB308; /* Amarillo vibrante para acentos */
-    --bg-color: #F0F9FF;        /* Un azul muy pálido de fondo para limpieza */
-    --text-color: #1E293B;      /* Gris muy oscuro para el texto principal */
-    --text-muted: #64748B;      /* Gris para textos secundarios */
+    --primary-color: #0F172A; /* Azul oscuro elegante */
+    --accent-color: #2563EB;  /* Azul moderno */
+    --bg-color: #F8FAFC;      /* Gris muy claro */
+    --text-color: #334155;    /* Texto principal */
     --white: #FFFFFF;
 }
 
@@ -15,7 +14,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
@@ -24,94 +23,83 @@ body {
     min-height: 100vh;
 }
 
-/* --- Encabezado y Navegación --- */
+/* Encabezado y Navegación */
 header {
-    background-color: var(--uady-azul-marino);
+    background-color: var(--primary-color);
     color: var(--white);
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     text-align: center;
-    border-bottom: 4px solid var(--uady-amarillo-oro); /* Detalle distintivo de la UADY */
 }
 
 header h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    font-weight: 800; /* Negrita fuerte para el título */
-    letter-spacing: -0.025em;
+    letter-path: -0.025em;
 }
 
 header p {
-    font-size: 1.25rem;
-    color: #CBD5E1; /* Un tono más claro de gris azulado */
-    margin-bottom: 2rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    color: #94A3B8;
+    margin-bottom: 1.5rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
 nav a {
     color: var(--white);
     text-decoration: none;
-    font-weight: 600;
-    padding: 0.75rem 1.25rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
     border-radius: 0.375rem;
-    transition: all 0.3s ease; /* Transición suave para el hover */
-    border: 1px solid transparent;
+    transition: background-color 0.2s ease;
 }
 
 nav a:hover {
-    background-color: rgba(234, 179, 8, 0.15); /* Fondo amarillo muy sutil al pasar el mouse */
-    color: var(--uady-amarillo-oro);
-    border-color: var(--uady-amarillo-oro);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- Contenido Principal --- */
+/* Contenido Principal */
 main {
     flex: 1;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    padding: 3rem 1.5rem;
 }
 
 .hero {
     background-color: var(--white);
-    padding: 4rem;
+    padding: 3rem;
     border-radius: 1rem;
-    /* Sombra suave para dar profundidad */
-    box-shadow: 0 10px 15px -3px rgba(12, 35, 75, 0.1), 0 4px 6px -2px rgba(12, 35, 75, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     text-align: center;
-    border-left: 5px solid var(--uady-amarillo-oro); /* Toque de color institucional */
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    color: var(--uady-azul-marino);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.3rem;
-    color: var(--text-muted);
-    max-width: 700px;
+    font-size: 1.2rem;
+    color: #64748B;
+    max-width: 600px;
     margin: 0 auto;
-    font-weight: 400;
 }
 
-/* --- Pie de página --- */
+/* Pie de página */
 footer {
-    background-color: var(--uady-azul-marino);
-    color: #CBD5E1;
+    background-color: #1E293B;
+    color: #94A3B8;
     text-align: center;
-    padding: 2rem;
-    font-size: 1rem;
+    padding: 1.5rem;
+    font-size: 0.9rem;
     margin-top: auto;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
