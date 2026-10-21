@@ -1,4 +1,4 @@
-# UADY CONECT
+# ChatBot UADY
 
 Asistente con IA que responde dudas de la **Facultad de Matemáticas de la UADY** (y que está pensado para crecer al resto de la universidad) usando únicamente **documentos y páginas oficiales**, y que siempre te lleva a la fuente original.
 
