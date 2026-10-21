@@ -1,0 +1,51 @@
+# Lista de fuentes oficiales a indexar.
+# Cada fuente es una URL (página web o PDF) con metadatos que el bot usará
+# para citar y para priorizar documentos vigentes.
+#
+# Campos:
+#   id            identificador único, sin espacios (se usa como nombre de archivo)
+#   url           dirección del documento o página
+#   type          calendario | convocatoria | reglamento | plan_estudios | tramite | pagina
+#   title         título legible
+#   published     fecha de publicación del documento (YYYY-MM-DD) si la conoces
+#   school_cycle  ciclo escolar al que aplica, si aplica (ej. "ene-jul 2023")
+#   faculty       matematicas | uady (si es de toda la universidad)
+#   status        vigente | historico
+#
+# IMPORTANTE: los dos ejemplos de abajo son calendarios históricos de 2022 y 2023,
+# útiles para probar la extracción. Reemplázalos o agrega los vigentes: entra a
+# matematicas.uady.mx (sección de Control Escolar) y copia la URL de cada documento.
+
+defaults:
+  user_agent: "ChatBotUADY/0.1 (proyecto estudiantil; contacto: TU_CORREO)"
+  delay_seconds: 2.0
+  timeout_seconds: 30
+
+sources:
+  - id: fm-calendario-meya-ene-jul-2022
+    url: https://www.matematicas.uady.mx/files/control-escolar/2022/02/2022-02-09_calendario-meya-enero-julio-2022.pdf
+    type: calendario
+    title: Calendario de actividades académicas MEyA, enero-julio 2022
+    published: 2022-02-09   # tomada del nombre del archivo
+    school_cycle: "ene-jul 2022"
+    faculty: matematicas
+    status: historico
+
+  - id: fm-calendario-meya-ene-jul-2023
+    url: https://www.matematicas.uady.mx/files/control-escolar/2023/03/2023-03-17_calendario-meya-enero-julio-2023.pdf
+    type: calendario
+    title: Calendario de actividades académicas MEyA, enero-julio 2023
+    published: 2023-03-17   # tomada del nombre del archivo
+    school_cycle: "ene-jul 2023"
+    faculty: matematicas
+    status: historico
+
+  # Plantilla para agregar más:
+  # - id: fm-convocatoria-ingreso-XXXX
+  #   url: https://...
+  #   type: convocatoria
+  #   title: ...
+  #   published: YYYY-MM-DD
+  #   school_cycle: "..."
+  #   faculty: matematicas
+  #   status: vigente
